@@ -121,6 +121,7 @@ hr {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
+
   align-items: flex-start;
 }
 
@@ -130,12 +131,17 @@ hr {
   background-color: rgba(240, 240, 240, 0.8);
   border-radius: 15px;
   padding: 20px;
-  margin: 12px 0;
-  width: 100%;
-  max-width: 800px;
+  margin: 24px;
+  width: 80%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+.project.left {
+  align-self: flex-start; /* Menyelaraskan ke kiri */
+}
 
+.project.right {
+  align-self: flex-end; /* Menyelaraskan ke kanan */
+}
 .project-image {
   width: 150px;
   height: auto;
