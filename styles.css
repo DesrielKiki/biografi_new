@@ -11,17 +11,52 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: white;
 }
-.navBar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
   height: 64px;
   position: sticky;
   top: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
   z-index: 1000;
+}
+.navBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 64px;
+
+  background-color: #4b50ed;
+  top: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+  position: relative;
+
+  z-index: 1000;
+  position: sticky;
+}
+
+.navBar h1 {
+  margin: 0;
+  color: white;
+}
+
+.navbarList {
+  display: flex;
   gap: 20px;
+  color: white;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navBar ul li {
+  list-style-type: none;
+}
+.navBar ul li a {
+  text-decoration: none;
+  color: white;
+
+  list-style-type: none;
 }
 .profileInfoContainer h1 {
   padding-top: 2%;
@@ -35,7 +70,7 @@ body {
   color: #333;
 }
 .navBar a:hover {
-  color: blue;
+  color: greenyellow;
 }
 .profileMainContainer {
   position: relative;
@@ -45,8 +80,8 @@ body {
     rgba(75, 80, 237, 1) 50%,
     rgba(0, 199, 240, 1) 100%
   );
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 20px auto;
+  padding-right: 20px auto;
   padding-bottom: 32px;
   padding-top: 32px;
   text-align: center;
@@ -59,32 +94,38 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   box-shadow: 0 4px 20px #007991;
-  padding: 40px;
+  padding: 72px; /* Adjust padding */
   gap: 20px;
   display: flex;
-
-  justify-items: center;
-  margin-right: 100px;
-  margin-left: 100px;
-  margin-top: 72px;
-  margin-bottom: 72px;
-  align-items: center;
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow wrapping */
+  margin: 0 auto; /* Center card on screen */
+  margin-top: 92px;
+  margin-bottom: 92px;
+  max-width: 800px; /* Set a max-width for larger screens */
+  width: 90%; /* Set a percentage width for responsiveness */
 }
+
 .profilePic {
-  width: 300px;
-  height: 400px;
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Set a max width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 15%;
   object-fit: cover;
   border: 3px solid #191919;
+  margin-right: 20px; /* Add margin to separate image from text */
 }
+
+.mainProfile {
+  flex: 1; /* Allow text to take remaining space */
+  font-size: 24px;
+  text-align: start;
+}
+
 .mainProfile h1 {
   margin-top: 0;
 }
-.mainProfile {
-  flex: 1;
-  font-size: 24px;
-  text-align: justify;
-}
+
 .profileInfoContainer {
   justify-content: center;
   align-items: center;
@@ -123,12 +164,12 @@ hr {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start;
 }
 
 .project {
   display: flex;
-  align-items: center; /* Align items vertically centered */
+  align-items: center;
   background-color: rgba(240, 240, 240, 0.8);
   border-radius: 15px;
   padding: 20px;
@@ -138,33 +179,28 @@ hr {
 }
 
 .project-image {
-  width: 150px; /* Set the desired width for images */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: round the corners of the image */
-  margin-right: 20px; /* Space between image and text */
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 .project-text {
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 .project.left {
-  align-self: flex-start; /* Align to left */
+  align-self: flex-start;
 }
 
 .project.right {
-  align-self: flex-end; /* Align to right */
+  align-self: flex-end;
 }
 .footer {
-  background-color: rgba(
-    0,
-    199,
-    240,
-    1
-  ); /* Ganti dengan warna yang diinginkan */
+  background-color: rgba(0, 199, 240, 1);
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: 40px; /* Jarak dari konten di atas */
+  margin-top: 40px;
 }
 
 .footer h2 {
@@ -174,51 +210,71 @@ hr {
 .social-media-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Jarak antar tombol */
+  gap: 15px;
 }
 
 .social-button img {
-  width: 40px; /* Atur ukuran ikon */
-  height: 40px; /* Atur ukuran ikon */
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s;
 }
 
 .social-button:hover img {
-  transform: scale(1.1); /* Efek zoom saat hover */
+  transform: scale(1.1);
 }
 .floating-button {
   position: fixed;
-  bottom: 20px; /* Jarak dari bawah */
-  right: 20px; /* Jarak dari kanan */
-  background-color: #4b50ed; /* Ganti dengan warna yang diinginkan */
+  bottom: 20px;
+  right: 20px;
+  background-color: #4b50ed;
   border-radius: 50%;
-  width: 56px; /* Ukuran FAB */
-  height: 56px; /* Ukuran FAB */
+  width: 56px;
+  height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  text-decoration: none; /* Menghilangkan garis bawah */
+  text-decoration: none;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .floating-button img {
-  width: 24px; /* Atur ukuran ikon */
-  height: auto; /* Maintain aspect ratio */
+  width: 24px;
+  height: auto;
 }
-
 .floating-button:hover {
-  background-color: #6a7dcf; /* Warna saat hover */
-  transform: scale(1.1); /* Efek zoom saat hover */
+  background-color: #6a7dcf;
+  transform: scale(1.1);
 }
 .projectListContainer {
-  background-color: #007991;
+  background-color: rgba(0, 199, 240, 1);
   width: 480px;
   margin: 0 auto;
   margin-top: 32px;
+  text-decoration: none;
+
+  border-radius: 15px;
   margin-bottom: 32px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.projectListContainer ol {
+  padding-left: 20px;
+}
+
 .projectListContainer ol li {
-  list-style-type: none;
-  margin: 12px;
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 0.3s;
+}
+.projectListContainer a {
+  text-decoration: none;
+}
+
+.projectListContainer ol li:hover {
+  background-color: rgba(254, 1, 1, 0.1);
 }
