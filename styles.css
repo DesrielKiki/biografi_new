@@ -108,7 +108,7 @@ body {
   margin: 20px;
   margin-top: 72px;
   margin-bottom: 72px;
-
+  text-align: justify;
   font-size: 20px;
 }
 
@@ -135,28 +135,28 @@ hr {
   margin: 24px;
   width: 80%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s; /* Tambahkan transisi */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-link {
-  text-decoration: none; /* Menghapus garis bawah dari link */
-  color: inherit; /* Mengatur warna teks agar mengikuti warna teks normal */
-  display: flex; /* Memastikan konten dalam link juga bersifat fleksibel */
+  text-decoration: none;
+  color: inherit;
+  display: flex;
 }
 .project:hover {
-  transform: translateY(-5px); /* Mengangkat card saat hover */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .project.left {
-  align-self: flex-start; /* Menyelaraskan ke kiri */
+  align-self: flex-start;
 }
 
 .project.right {
-  align-self: flex-end; /* Menyelaraskan ke kanan */
+  align-self: flex-end;
 }
 .project-image {
   width: 60%;
   max-width: 150px;
-  margin: 0 10px; /* Margin untuk jarak antara gambar dan teks */
+  margin: 0 10px;
 }
 
 .footer {
