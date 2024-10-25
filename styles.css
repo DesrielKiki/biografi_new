@@ -1,254 +1,185 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  color: #333;
-  box-sizing: border-box; /* Ensure padding and margin are included in width/height */
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: white;
+  background-color: #f8f9fa;
+  color: #343a40;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .header {
-  height: 64px;
+  background-color: #007bff;
   position: sticky;
   top: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-}
 
-.navBar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 64px;
-  background-color: #4b50ed;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1000;
-}
-
-.navBar h1 {
-  margin: 0;
-  color: white;
-}
-
-.navbarList {
-  display: flex;
-  gap: 20px;
-  color: white;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.navBar ul li {
-  list-style-type: none;
-}
-
-.navBar ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.profileMainContainer {
-  background: linear-gradient(
-    90deg,
-    rgba(23, 15, 163, 1) 0%,
-    rgba(75, 80, 237, 1) 50%,
-    rgba(0, 199, 240, 1) 100%
-  );
-  padding: 32px 20px;
-  text-align: center;
-  color: white;
+  color: #ffffff;
 }
 
 .profileCard {
-  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 20px #007991;
-  padding: 32px; /* Adjust padding */
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 20px auto;
-  margin-top: 134px;
-  margin-bottom: 134px;
-  max-width: 800px;
-  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease; /* Transisi halus saat mengganti mode */
+}
+
+/* Gradien untuk mode terang */
+.profileCard.light-mode {
+  background: linear-gradient(
+    90deg,
+    rgba(75, 80, 237, 1) 0%,
+    rgba(100, 120, 255, 1) 50%,
+    rgba(0, 199, 240, 1) 100%
+  );
+}
+
+/* Gradien untuk mode gelap */
+.profileCard.dark-mode {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 20, 40, 1) 0%,
+    rgba(30, 30, 60, 1) 50%,
+    rgba(10, 10, 20, 1) 100%
+  );
 }
 
 .profilePic {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 15%;
-  object-fit: cover;
-  border: 3px solid #191919;
-  margin-right: 20px;
-}
-
-.mainProfile {
-  flex: 1;
-  font-size: 24px;
-  text-align: start;
-}
-
-.profileInfoContainer,
-.portofolioContainer {
-  padding: 32px 20px;
-  text-align: center;
+  width: 150px;
+  height: 150px;
 }
 
 .profileInfoDescription {
-  margin: 20px;
-  margin-top: 72px;
-  margin-bottom: 72px;
   text-align: justify;
+  padding: 50px;
   font-size: 20px;
 }
 
-hr {
-  border: none;
-  height: 4px;
-  width: 80%;
-  margin: 20px auto;
-  background-color: #4b50ed;
-}
-
-.project-container {
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.project {
-  display: flex;
-  background-color: rgba(240, 240, 240, 0.8);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 24px;
-  width: 80%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-link {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-}
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-.project.left {
-  align-self: flex-start;
-}
-
-.project.right {
-  align-self: flex-end;
-}
-.project-image {
-  width: 60%;
-  max-width: 150px;
-  margin: 0 10px;
-}
-
-.footer {
-  background-color: rgba(0, 199, 240, 1);
-  color: white;
-  justify-content: center;
-  text-align: center;
-  padding: 20px 0;
-}
-.footer h2 {
-  margin-bottom: 20px;
-  justify-items: center;
+.portofolioContainer {
+  padding: 50px 0;
 }
 
 .social-media-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .social-button img {
   width: 40px;
   height: 40px;
-  transition: transform 0.3s;
 }
 
-.floating-button {
-  position: fixed;
-  bottom: 58px;
-  right: 58px;
-  background-color: #4b50ed;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
+.footer {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 20px 0;
 }
 
-.floating-button img {
-  width: 24px;
-  height: auto;
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #343a40;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+.profileCard {
+  padding: 10rem 0;
+}
+body.dark-mode .header,
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar-light .navbar-brand {
+  color: #ffffff;
+}
+
+body.dark-mode .profileCard {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #ffffff;
+}
+
+body.dark-mode .card {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #e0e0e0;
+  border: 1px solid #4b50ed;
 }
 
 @media (max-width: 768px) {
-  .project-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profileCard {
-    flex-direction: column;
+  .jumbotron {
     padding: 20px;
   }
 
-  .navBar h1 {
-    display: none;
-  }
-  .profilePic {
-    margin-right: 0;
-    margin-bottom: 20px;
+  .profileCard {
+    padding: 15px;
   }
 
-  .mainProfile {
-    font-size: 20px;
+  .profileInfoDescription {
+    font-size: 18px;
   }
 
-  .project {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .project-image {
-    margin: 24px;
-    width: 60%;
-    max-width: 150px;
-  }
-  hr {
-    width: 90%;
+  .social-button img {
+    width: 30px;
+    height: 30px;
   }
 }
 
-@media (max-width: 480px) {
-  .navBar a {
-    font-size: 16px;
+@media (max-width: 576px) {
+  .navbar-nav {
+    flex-direction: column;
   }
 
-  .footer {
-    font-size: 14px;
+  .profilePic {
+    width: 80%;
+    margin-bottom: 15px;
   }
+}
+.bg-dark-green {
+  background-color: #004d00; /* Ganti dengan kode warna biru hijau gelap yang diinginkan */
+  color: white; /* Ubah warna teks menjadi putih untuk kontras yang baik */
+}
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Bayangan untuk navbar */
+}
+.profileInfoContainer {
+  padding: 50px 0; /* Menambahkan padding atas dan bawah */
+}
+.profileInfoContainer H1 {
+  padding: 50px 0; /* Menambahkan padding atas dan bawah */
+  text-align: center; /* Memusatkan teks */
+}
+
+.portofolioContainer {
+  padding: 50px 0; /* Menambahkan padding atas dan bawah */
+}
+.portofolioContainer h1 {
+  padding: 50px 0; /* Menambahkan padding atas dan bawah */
+  text-align: center; /* Memusatkan teks */
+}
+
+.card {
+  max-width: 25rem; /* Menetapkan lebar maksimum untuk kartu portofolio */
+  margin: auto; /* Memusatkan kartu di dalam kolom */
+}
+
+.card-title {
+  white-space: nowrap; /* Mencegah teks membungkus */
+  overflow: hidden; /* Menyembunyikan bagian yang melampaui batas */
+  text-overflow: ellipsis; /* Menambahkan ellipsis (...) untuk teks yang terlalu panjang */
+}
+
+.card-text {
+  max-height: 50px; /* Menetapkan tinggi maksimum untuk teks */
+  overflow: hidden; /* Menyembunyikan bagian yang melampaui batas */
+  text-overflow: ellipsis; /* Menambahkan ellipsis (...) untuk teks yang terlalu panjang */
+  display: -webkit-box; /* Membuat kontainer fleksibel untuk teks */
+  -webkit-line-clamp: 2; /* Mengatur jumlah baris yang ditampilkan */
+  -webkit-box-orient: vertical; /* Mengatur orientasi kotak */
 }

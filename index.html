@@ -4,37 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biografi Desriel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="header">
-      <nav class="navBar">
-        <h1>Desriel Biografi</h1>
-        <ul class="navbarList">
-          <li><a href="#profile">Profile</a></li>
-          <li><a href="#description">Description</a></li>
-          <li><a href="#portofolio">Portofolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+          <h1 class="navbar-brand">Desriel Biografi</h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <!-- Gunakan mx-auto untuk memusatkan navbar -->
+              <li class="nav-item">
+                <a class="nav-link" href="#profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#description">Description</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portofolio">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+        </div>
       </nav>
     </header>
 
+    <div class="container-jumbotron">
+      <div class="jumbotron text-center bg-light p-5">
+        <h1 class="display-4">Selamat Datang di Portofolio Saya!</h1>
+        <p class="lead">
+          Saya adalah Desriel Frizky Andharta, seorang pengembang perangkat
+          lunak dengan fokus pada Mobile dan web development.
+        </p>
+        <hr class="my-4" />
+        <p>Jelajahi proyek-proyek yang telah saya kerjakan.</p>
+      </div>
+    </div>
+
     <section class="profileMainContainer" id="profile">
-      <div class="profileCard">
+      <div class="profileCard text-center">
         <img
           src="image/foto_profil.jpeg"
           alt="foto profil"
-          class="profilePic"
+          class="profilePic rounded-circle"
         />
         <div class="mainProfile">
           <h1>Desriel Frizky Andharta</h1>
-          <p>Nim : A11.2024.15575</p>
-          <p>Kelas : 4101</p>
-          <p>Tempat, Tanggal lahir : Demak, 09 Desember 2005</p>
-          <p>Agama : Islam</p>
+          <p>Nim: A11.2024.15575</p>
+          <p>Kelas: 4101</p>
+          <p>Tempat, Tanggal lahir: Demak, 09 Desember 2005</p>
+          <p>Agama: Islam</p>
         </div>
       </div>
     </section>
+
     <section class="profileInfoContainer" id="description">
       <h1>Description</h1>
       <hr />
@@ -67,120 +111,186 @@
 
     <section class="portofolioContainer" id="portofolio">
       <h1>Portofolio Project</h1>
-      <div class="project-container">
-        <div class="project left" id="metaNews">
-          <a
-            href="https://github.com/DesrielKiki/NewsApp"
-            target="_blank"
-            class="project-link"
-          >
-            <img
-              src="image/logo_metaNews.png"
-              alt="Meta News"
-              class="project-image"
-            />
-            <div class="project-text">
-              <h2>Meta News</h2>
-              <p>
-                Meta News adalah aplikasi berita inovatif yang menyediakan
-                pengguna dengan akses real-time ke berita terkini dari berbagai
-                sumber. Dikembangkan menggunakan bahasa pemrograman Kotlin,
-                aplikasi ini memanfaatkan API dari News.org untuk mengumpulkan
-                dan menampilkan artikel-artikel terbaru. Dengan antarmuka yang
-                ramah pengguna, Meta News memungkinkan pengguna untuk
-                menjelajahi berbagai kategori berita, membagikan artikel favorit
-                mereka, dan tetap terinformasi tentang isu-isu penting di
-                seluruh dunia.
-              </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/tempat_wisata_logo.png"
+                class="card-img-top"
+                alt="Meta News"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tempat Wisata</h5>
+                <p class="card-text">
+                  aplikasi penugasan dicoding android pemula
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/Tempat-wisata"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="project right" id="ojekkuApp">
-          <a
-            href="https://github.com/DesrielKiki/ojekku"
-            target="_blank"
-            class="project-link"
-          >
-            <div class="project-text">
-              <h2>Ojekku App</h2>
-              <p>
-                Ojekku App adalah aplikasi transportasi berbasis mobile yang
-                mengadopsi konsep dari layanan ojek online terkemuka di
-                Indonesia. Menggunakan Jetpack Compose untuk pengembangan
-                antarmuka, aplikasi ini memberikan pengalaman pengguna yang
-                intuitif dan responsif. Ojekku App juga terintegrasi dengan Maps
-                API, memungkinkan pengguna untuk dengan mudah mencari lokasi,
-                memesan ojek, dan melacak perjalanan mereka secara real-time.
-                Aplikasi ini bertujuan untuk memberikan solusi transportasi yang
-                efisien dan nyaman bagi masyarakat.
-              </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/logo_metaNews.png"
+                class="card-img-top"
+                alt="Meta News"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Meta News</h5>
+                <p class="card-text">
+                  Aplikasi berita inovatif yang menyediakan pengguna dengan
+                  akses real-time ke berita terkini dari berbagai sumber.
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/NewsApp"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
             </div>
-          </a>
-          <img
-            src="image/logo_ojekku.jpg"
-            alt="Ojekku App"
-            class="project-image"
-          />
-        </div>
-        <div class="project left" id="consignmentApp">
-          <a
-            href="https://github.com/DesrielKiki/ConsignmentApp"
-            target="_blank"
-            class="project-link"
-          >
-            <img
-              src="image/logo_consignmentApp.png"
-              alt="Consignment App"
-              class="project-image"
-            />
-            <div class="project-text">
-              <h2>Consignment App</h2>
-              <p>
-                Consignment App adalah platform konsinyasi yang dikembangkan
-                menggunakan Kotlin, dirancang untuk memudahkan pengguna dalam
-                membeli dan menjual barang secara online. Aplikasi ini
-                menyediakan fitur bagi pengguna untuk mendaftarkan barang yang
-                ingin dijual, serta mengelola transaksi dengan aman. Dengan
-                antarmuka yang sederhana dan fungsionalitas yang intuitif,
-                Consignment App memberikan pengalaman berbelanja yang
-                menyenangkan dan efektif, serta membantu penjual untuk
-                menjangkau lebih banyak pembeli.
-              </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/logo_ojekku.jpg"
+                class="card-img-top"
+                alt="Ojekku App"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ojekku App</h5>
+                <p class="card-text">
+                  Aplikasi transportasi berbasis mobile yang memberikan
+                  pengalaman pengguna yang intuitif dan responsif.
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/ojekku"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="project right" id="todoApp">
-          <a
-            href="https://github.com/DesrielKiki/toDoApp"
-            target="_blank"
-            class="project-link"
-          >
-            <div class="project-text">
-              <h2>Todo App</h2>
-              <p>
-                Todo App adalah aplikasi yang dirancang khusus untuk membantu
-                pengguna dalam mengelola dan mencatat tugas harian mereka.
-                Dengan fokus pada kemudahan penggunaan, aplikasi ini
-                memungkinkan pengguna untuk menambahkan, mengedit, dan menghapus
-                tugas dengan cepat dan efisien. Todo App juga menyediakan fitur
-                pengingat untuk memastikan bahwa pengguna tidak melewatkan
-                tenggat waktu penting. Dengan desain yang bersih dan
-                fungsionalitas yang intuitif, aplikasi ini menjadi alat yang
-                sempurna bagi mereka yang ingin meningkatkan produktivitas dan
-                organisasi dalam kehidupan sehari-hari.
-              </p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/logo_consignmentApp.png"
+                class="card-img-top"
+                alt="Consignment App"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Consignment App</h5>
+                <p class="card-text">
+                  Platform konsinyasi yang memudahkan pengguna dalam membeli dan
+                  menjual barang secara online.
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/ConsignmentApp"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
             </div>
-          </a>
-          <img
-            src="image/logo_todoapp.png"
-            alt="Todo App"
-            class="project-image"
-          />
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/logo_vault_donation.png"
+                class="card-img-top"
+                alt="Consignment App"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Vault Donation</h5>
+                <p class="card-text">
+                  mempermudah tugas seorang petugas vault di game Lifeafter
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/VaultDonation"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/logo_todoapp.png"
+                class="card-img-top"
+                alt="Todo App"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Todo App</h5>
+                <p class="card-text">
+                  Aplikasi yang dirancang untuk membantu pengguna dalam
+                  mengelola dan mencatat tugas harian mereka.
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/toDoApp"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/logo_hmti.png"
+                class="card-img-top"
+                alt="HMTI Member Registration"
+              />
+              <div class="card-body">
+                <h5 class="card-title">HMTI Registration</h5>
+                <p class="card-text">
+                  aplikasi form pendaftaran anggota HMTI yang di rancang untuk
+                  menyelesaikan penugasan
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/HMTIMemberRegistration"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 mb-4">
+            <div class="card">
+              <img
+                src="image/shapee_logo.png"
+                class="card-img-top"
+                alt="HMTI Member Registration"
+              />
+              <div class="card-body">
+                <h5 class="card-title">TokoKu</h5>
+                <p class="card-text">
+                  aplikasi yang berupa e-commerce yang terinspirasi dari shopee
+                </p>
+                <a
+                  href="https://github.com/DesrielKiki/shapee_app"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer" id="contact">
+    <footer class="footer text-center" id="contact">
       <h2>Ikuti Saya di Media Sosial</h2>
       <div class="social-media-buttons">
         <a
@@ -215,9 +325,16 @@
           <img src="image/logo_gmail.png" alt="Email" />
         </a>
       </div>
+      <p class="footer-text">
+        © 2024 Desriel Frizky Andharta. All rights reserved.
+      </p>
     </footer>
-    <a href="#" class="floating-button" id="scrollToTop">
-      <img src="image/up_arrow_no_circle.png" alt="Scroll to Top" />
-    </a>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-nh9F8GTru5EkZ6H0N1rE08XFeG2twhsK4cbRnxqkVtJpF47Ri8W3M1Rl7S5kmboB"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
