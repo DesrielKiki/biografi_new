@@ -17,10 +17,9 @@ body {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background 0.5s ease; /* Transisi halus saat mengganti mode */
+  transition: background 0.5s ease;
 }
 
-/* Gradien untuk mode terang */
 .profileCard.light-mode {
   background: linear-gradient(
     90deg,
@@ -30,7 +29,6 @@ body {
   );
 }
 
-/* Gradien untuk mode gelap */
 .profileCard.dark-mode {
   background: linear-gradient(
     90deg,
@@ -112,6 +110,9 @@ body.dark-mode .card {
 }
 
 @media (max-width: 768px) {
+  nav h1 {
+    display: none;
+  }
   .jumbotron {
     padding: 20px;
   }
@@ -130,56 +131,69 @@ body.dark-mode .card {
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 315px) {
+  * {
+    overflow-x: hidden;
+  }
+  nav h1 {
+    display: none;
+  }
   .navbar-nav {
     flex-direction: column;
   }
 
   .profilePic {
-    width: 80%;
     margin-bottom: 15px;
   }
 }
 .bg-dark-green {
-  background-color: #004d00; /* Ganti dengan kode warna biru hijau gelap yang diinginkan */
-  color: white; /* Ubah warna teks menjadi putih untuk kontras yang baik */
+  background-color: #004d00;
+  color: white;
 }
 .navbar {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Bayangan untuk navbar */
+  z-index: 1000;
 }
 .profileInfoContainer {
-  padding: 50px 0; /* Menambahkan padding atas dan bawah */
+  padding: 50px 0;
 }
 .profileInfoContainer H1 {
-  padding: 50px 0; /* Menambahkan padding atas dan bawah */
-  text-align: center; /* Memusatkan teks */
+  padding: 50px 0;
+  text-align: center;
 }
 
 .portofolioContainer {
-  padding: 50px 0; /* Menambahkan padding atas dan bawah */
+  padding: 50px 0;
 }
 .portofolioContainer h1 {
-  padding: 50px 0; /* Menambahkan padding atas dan bawah */
-  text-align: center; /* Memusatkan teks */
+  padding: 50px 0;
+  text-align: center;
 }
 
 .card {
-  max-width: 25rem; /* Menetapkan lebar maksimum untuk kartu portofolio */
-  margin: auto; /* Memusatkan kartu di dalam kolom */
+  max-width: 25rem;
+  margin: auto;
 }
 
 .card-title {
-  white-space: nowrap; /* Mencegah teks membungkus */
-  overflow: hidden; /* Menyembunyikan bagian yang melampaui batas */
-  text-overflow: ellipsis; /* Menambahkan ellipsis (...) untuk teks yang terlalu panjang */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-text {
-  max-height: 50px; /* Menetapkan tinggi maksimum untuk teks */
-  overflow: hidden; /* Menyembunyikan bagian yang melampaui batas */
-  text-overflow: ellipsis; /* Menambahkan ellipsis (...) untuk teks yang terlalu panjang */
-  display: -webkit-box; /* Membuat kontainer fleksibel untuk teks */
-  -webkit-line-clamp: 2; /* Mengatur jumlah baris yang ditampilkan */
-  -webkit-box-orient: vertical; /* Mengatur orientasi kotak */
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  padding: 0.5rem 0.5rem;
 }

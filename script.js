@@ -2,20 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
   const jumbotron = document.querySelector(".jumbotron");
   const navbar = document.querySelector(".navbar");
-  const profileCard = document.querySelector(".profileCard"); // Ambil elemen profileCard
+  const profileCard = document.querySelector(".profileCard");
 
-  // Cek apakah dark mode sudah disimpan di localStorage
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark-mode");
     enableDarkMode();
   } else {
-    // Atur mode terang sebagai default
     document.body.classList.remove("dark-mode");
-    profileCard.classList.add("light-mode"); // Tambahkan light-mode saat dimuat
+    profileCard.classList.add("light-mode");
     disableDarkMode();
   }
 
-  // Event listener untuk toggle dark mode
   darkModeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
@@ -28,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Fungsi untuk mengaktifkan dark mode
   function enableDarkMode() {
     jumbotron.classList.remove("bg-light");
     jumbotron.classList.add("bg-dark");
@@ -36,11 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.remove("navbar-light", "bg-light");
     navbar.classList.add("navbar-dark", "bg-dark");
     profileCard.classList.remove("light-mode");
-    profileCard.classList.add("dark-mode"); // Ganti ke dark-mode
-    darkModeToggle.textContent = "☀️"; // Ubah ikon tombol ke matahari
+    profileCard.classList.add("dark-mode");
+    darkModeToggle.textContent = "☀️";
   }
 
-  // Fungsi untuk menonaktifkan dark mode
   function disableDarkMode() {
     jumbotron.classList.remove("bg-dark");
     jumbotron.classList.add("bg-light");
@@ -48,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar.classList.remove("navbar-dark", "bg-dark");
     navbar.classList.add("navbar-light", "bg-light");
     profileCard.classList.remove("dark-mode");
-    profileCard.classList.add("light-mode"); // Ganti ke light-mode
-    darkModeToggle.textContent = "🌙"; // Ubah ikon tombol ke bulan
+    profileCard.classList.add("light-mode");
+    darkModeToggle.textContent = "🌙";
   }
 });
