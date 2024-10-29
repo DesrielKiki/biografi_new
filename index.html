@@ -16,26 +16,50 @@
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
-          <h1 class="navbar-brand">Desriel Biografi</h1>
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#profile">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#description">Description</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portofolio">Portofolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-          <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+          <!-- Logo Teks -->
+          <h1 class="navbar-brand d-none d-lg-block">Desriel Biografi</h1>
+
+          <!-- Tombol Hamburger untuk layar kecil -->
+          <button
+            class="navbar-toggler d-md-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar List -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#description">Description</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portofolio">Portofolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Theme Toggle: Tampil di layar medium dan besar -->
+          <button
+            id="darkModeToggle"
+            class="dark-mode-toggle d-none d-md-block"
+          >
+            🌙
+          </button>
         </div>
       </nav>
     </header>
-
     <div class="container-jumbotron">
       <div class="jumbotron text-center bg-light p-5">
         <h1 class="display-4">Selamat Datang di Portofolio Saya!</h1>
@@ -95,11 +119,11 @@
       <hr />
     </section>
 
-    <section class="portofolioContainer" id="portofolio">
+    <section class="portofoli zoContainer" id="portofolio">
       <h1>Portofolio Project</h1>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/tempat_wisata_logo.png"
@@ -120,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_metaNews.png"
@@ -142,7 +166,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_ojekku.jpg"
@@ -164,7 +188,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_consignmentApp.png"
@@ -186,12 +210,12 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_vault_donation.png"
                 class="card-img-top"
-                alt="Consignment App"
+                alt="Vault Donation"
               />
               <div class="card-body">
                 <h5 class="card-title">Vault Donation</h5>
@@ -207,7 +231,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_todoapp.png"
@@ -229,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_hmti.png"
@@ -239,7 +263,7 @@
               <div class="card-body">
                 <h5 class="card-title">HMTI Registration</h5>
                 <p class="card-text">
-                  aplikasi form pendaftaran anggota HMTI yang di rancang untuk
+                  aplikasi form penda ftaran anggota HMTI yang di rancang untuk
                   menyelesaikan penugasan
                 </p>
                 <a
@@ -251,12 +275,12 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 mb-4">
+          <div class="col-3 mb-4">
             <div class="card">
               <img
                 src="image/shapee_logo.png"
                 class="card-img-top"
-                alt="HMTI Member Registration"
+                alt="TokoKu"
               />
               <div class="card-body">
                 <h5 class="card-title">TokoKu</h5>
