@@ -1,0 +1,151 @@
+#darkModeToggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-nav {
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    display: block;
+  }
+  .navbar-nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-nav {
+    display: flex;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .navbar-collapse {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-collapse {
+    flex-direction: row;
+  }
+  .navbar-collapse.show {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .card-text {
+    text-align: left; /* Rata kiri untuk tampilan responsif */
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 300px;
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+@media (min-width: 769px) {
+  .card-img-top {
+    height: 200px;
+  }
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .card-text {
+    --webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-text {
+    --webkit-line-clamp: 2;
+  }
+}
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+  .card-text {
+    -webkit-line-clamp: 4; /* Batasi tampilan menjadi 2 baris */
+    display: -webkit-box; /* Pastikan display adalah box */
+    overflow: hidden; /* Sembunyikan overflow */
+    text-overflow: ellipsis; /* Tambahkan elipsis */
+  }
+}
+
+@media (min-width: 768px) {
+  .card-text {
+    -webkit-line-clamp: 3; /* Batasi tampilan menjadi 3 baris untuk tampilan lebih besar */
+  }
+}

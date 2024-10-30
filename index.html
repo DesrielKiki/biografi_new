@@ -11,17 +11,27 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-nh9F8GTru5EkZ6H0N1rE08XFeG2twhsK4cbRnxqkVtJpF47Ri8W3M1Rl7S5kmboB"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <header class="header">
+    <div class="navbar-container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
-          <!-- Logo Teks -->
-          <h1 class="navbar-brand d-none d-lg-block">Desriel Biografi</h1>
-
-          <!-- Tombol Hamburger untuk layar kecil -->
+          <a class="navbar-brand" href="#">Desriel's Portofolio</a>
           <button
-            class="navbar-toggler d-md-none"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -32,34 +42,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- Navbar List -->
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#profile">Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#description">Description</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portofolio">Portofolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
+            <div class="navbar-nav d-flex flex-md-row">
+              <a class="nav-link" href="#profile">Profile</a>
+              <a class="nav-link" href="#description">Description</a>
+              <a class="nav-link" href="#portofolio">Portofolio</a>
+              <a class="nav-link" href="#contact">Contact</a>
+            </div>
           </div>
-
-          <!-- Theme Toggle: Tampil di layar medium dan besar -->
-          <button
-            id="darkModeToggle"
-            class="dark-mode-toggle d-none d-md-block"
-          >
-            🌙
-          </button>
+          <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
         </div>
       </nav>
-    </header>
+    </div>
     <div class="container-jumbotron">
       <div class="jumbotron text-center bg-light p-5">
         <h1 class="display-4">Selamat Datang di Portofolio Saya!</h1>
@@ -90,40 +84,46 @@
     </section>
 
     <section class="profileInfoContainer" id="description">
-      <h1>Description</h1>
-      <hr />
-      <p class="profileInfoDescription">
-        Saya adalah seorang individu yang memiliki minat besar dalam
-        pengembangan perangkat lunak, dengan fokus utama pada teknologi Android.
-        Berbekal pengalaman dalam mengerjakan berbagai proyek mandiri, saya
-        telah mengasah kemampuan dalam merancang, mengembangkan, dan
-        mengoptimalkan aplikasi mobile menggunakan Kotlin sebagai bahasa
-        pemrograman utama. Melalui pengalaman magang sebagai Android Developer
-        di CAN Creative, saya terbiasa bekerja dalam lingkungan yang menuntut
-        kemampuan berpikir kritis dan kreatif. Saya memahami pentingnya menjaga
-        kualitas aplikasi, mulai dari performa hingga user experience, serta
-        terbuka untuk belajar dari tantangan baru.<br /><br />
-        Saat ini, saya juga sedang mempelajari web development untuk memperluas
-        keterampilan saya dalam pengembangan perangkat lunak. Selain
-        keterampilan teknis, saya memiliki kemampuan manajemen waktu yang baik,
-        yang memungkinkan saya menyelesaikan proyek dengan efektif dan efisien.
-        Saya senang mempelajari hal-hal baru, baik itu teknologi baru maupun
-        pendekatan inovatif dalam pemecahan masalah. Saya percaya bahwa
-        kolaborasi adalah kunci sukses dalam pengembangan perangkat lunak, dan
-        saya selalu berusaha untuk bekerja secara sinergis dengan tim. Komitmen
-        saya terhadap pengembangan diri terus mendorong saya untuk mempelajari
-        teknologi baru, memperbaiki metode kerja, dan terus berinovasi. Saya
-        siap untuk menghadapi tantangan yang lebih besar di masa depan dan
-        berkontribusi secara signifikan dalam pengembangan teknologi modern.
-      </p>
-      <hr />
+      <div class="container">
+        <br />
+        <h1>Description</h1>
+
+        <hr />
+        <p class="profileInfoDescription">
+          Saya adalah seorang individu yang memiliki minat besar dalam
+          pengembangan perangkat lunak, dengan fokus utama pada teknologi
+          Android. Berbekal pengalaman dalam mengerjakan berbagai proyek
+          mandiri, saya telah mengasah kemampuan dalam merancang, mengembangkan,
+          dan mengoptimalkan aplikasi mobile menggunakan Kotlin sebagai bahasa
+          pemrograman utama. Melalui pengalaman magang sebagai Android Developer
+          di CAN Creative, saya terbiasa bekerja dalam lingkungan yang menuntut
+          kemampuan berpikir kritis dan kreatif. Saya memahami pentingnya
+          menjaga kualitas aplikasi, mulai dari performa hingga user experience,
+          serta terbuka untuk belajar dari tantangan baru.<br /><br />
+          Saat ini, saya juga sedang mempelajari web development untuk
+          memperluas keterampilan saya dalam pengembangan perangkat lunak.
+          Selain keterampilan teknis, saya memiliki kemampuan manajemen waktu
+          yang baik, yang memungkinkan saya menyelesaikan proyek dengan efektif
+          dan efisien. Saya senang mempelajari hal-hal baru, baik itu teknologi
+          baru maupun pendekatan inovatif dalam pemecahan masalah. Saya percaya
+          bahwa kolaborasi adalah kunci sukses dalam pengembangan perangkat
+          lunak, dan saya selalu berusaha untuk bekerja secara sinergis dengan
+          tim. Komitmen saya terhadap pengembangan diri terus mendorong saya
+          untuk mempelajari teknologi baru, memperbaiki metode kerja, dan terus
+          berinovasi. Saya siap untuk menghadapi tantangan yang lebih besar di
+          masa depan dan berkontribusi secara signifikan dalam pengembangan
+          teknologi modern.
+        </p>
+        <hr />
+      </div>
     </section>
 
-    <section class="portofoli zoContainer" id="portofolio">
-      <h1>Portofolio Project</h1>
+    <section class="portofolioContainer" id="portofolio">
       <div class="container">
+        <h1>Portofolio Project</h1>
+        <hr />
         <div class="row">
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/tempat_wisata_logo.png"
@@ -144,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_metaNews.png"
@@ -166,7 +166,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_ojekku.jpg"
@@ -188,7 +188,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_consignmentApp.png"
@@ -210,7 +210,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_vault_donation.png"
@@ -231,7 +231,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_todoapp.png"
@@ -253,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/logo_hmti.png"
@@ -275,7 +275,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-md-3 mb-4">
             <div class="card">
               <img
                 src="image/shapee_logo.png"
@@ -297,6 +297,7 @@
             </div>
           </div>
         </div>
+        <hr />
       </div>
     </section>
 
